@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Editor JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  </head>
+  <body>
+
+    <div class="container disable" id = "div1">
+        <h2> Photo Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <button id="Brightness" >Brightness</button>
+                        <button id="Saturation">Saturation</button>
+                        <button id="Inversion">Inversion</button>
+                        <button id="Grayscale">Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left">Rotate Left</button>
+                        <button id="right">Rotate Right</button>
+                        <button id="horizontal">Flip x</button>
+                        <button id="vertical">Flip y</button>
+                    </div>
+                </div>
+                <div class="filter">
+                    <label class="title">Extra Filters</label>
+                    <div class="slider_options">
+                        <div class="ExtraSlider1">
+                            <div class="filter-info">
+                                <p id="blur" class="name2">Blur</p>
+                                <p class="value1">0px</p>
+                            </div>
+                            <input class="input1" type="range" value="0" min="0" max="10">
+                        </div>
+
+                        <div class="ExtraSlider2">
+                            <div class="filter-info">
+                                <p id="rotate"class="name2">Rotate</p>
+                                <p class="value2">0deg</p>
+                            </div>
+                            <input class="input2" type="range" value="0" min="0" max="360">
+                        </div>
+
+                        <div class="ExtraSlider3">
+                            <div class="filter-info">
+                                <p id="sepia"class="name2">Sepia</p>
+                                <p class="value3">0%</p>
+                            </div>
+                            <input class="input3" type="range" value="0" min="0" max="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-img">
+                <img src="image-placeholder.svg" alt="preview-img" id="image1">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter" onclick="resetImgChanges()">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*"hidden>
+                <button class="choose-img" onclick="chooseImg()">Choose Image</button>
+                <button class="save-img" id="downloadImg" onclick="saveImg()">Save Image</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScripting -->
+    <script src="script.js"></script>
+
+  </body>
+</html>
